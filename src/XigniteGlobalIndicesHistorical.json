@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalIndicesHistorical",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -1195,6 +1195,11 @@
                   "$ref": "#/components/schemas/IndexBars"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexBars"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/IndexBars"
@@ -1288,6 +1293,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexChartBars"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/IndexChartBars"
                 }
