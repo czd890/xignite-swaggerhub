@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalIndicesRealTime",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -15,7 +15,6 @@
         "tags": [
           "XigniteGlobalIndicesRealTime"
         ],
-        "summary": "List IndexGroups.",
         "responses": {
           "200": {
             "description": "Success",
