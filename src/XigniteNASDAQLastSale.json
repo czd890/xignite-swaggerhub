@@ -1,273 +1,19 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "XigniteGlobalIndicesRealTime",
-    "version": "1.0.3"
+    "title": "XigniteNASDAQLastSale",
+    "version": "1.0.0"
   },
   "servers": [
     {
-      "url": "https://globalindicesrealtime.xignite.com/"
+      "url": "https://nasdaqlastsale.xignite.com/"
     }
   ],
   "paths": {
-    "/xGlobalIndicesRealTime/ListIndexGroups": {
+    "/xNASDAQLastSale/GetExtendedQuote": {
       "get": {
         "tags": [
-          "XigniteGlobalIndicesRealTime"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexGroup"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexGroup"
-                  }
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexGroup"
-                  }
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexGroup"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/xGlobalIndicesRealTime/ListIndicesByIndexGroup": {
-      "get": {
-        "tags": [
-          "XigniteGlobalIndicesRealTime"
-        ],
-        "parameters": [
-          {
-            "name": "indexGroup",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexDescription"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexDescription"
-                  }
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexDescription"
-                  }
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexDescription"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/xGlobalIndicesRealTime/GetIndexSymbolMappingByOldSymbol": {
-      "get": {
-        "tags": [
-          "XigniteGlobalIndicesRealTime"
-        ],
-        "parameters": [
-          {
-            "name": "oldSymbol",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IndexSymbolMapping"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IndexSymbolMapping"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/IndexSymbolMapping"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/IndexSymbolMapping"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/xGlobalIndicesRealTime/GetIndexSymbolMappingsByOldSymbols": {
-      "get": {
-        "tags": [
-          "XigniteGlobalIndicesRealTime"
-        ],
-        "parameters": [
-          {
-            "name": "oldSymbols",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexSymbolMapping"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexSymbolMapping"
-                  }
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexSymbolMapping"
-                  }
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexSymbolMapping"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/xGlobalIndicesRealTime/SearchIndicesByName": {
-      "get": {
-        "tags": [
-          "XigniteGlobalIndicesRealTime"
-        ],
-        "parameters": [
-          {
-            "name": "indexName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexDescription"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexDescription"
-                  }
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexDescription"
-                  }
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IndexDescription"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/xGlobalIndicesRealTime/GetRealTimeIndexValue": {
-      "get": {
-        "tags": [
-          "XigniteGlobalIndicesRealTime"
+          "XigniteNASDAQLastSale"
         ],
         "parameters": [
           {
@@ -295,50 +41,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ExtendedQuote"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ExtendedQuote"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtendedQuote"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ExtendedQuote"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ExtendedQuote"
                 }
               }
             }
@@ -346,10 +69,10 @@
         }
       }
     },
-    "/xGlobalIndicesRealTime/GetRealTimeIndicesValue": {
+    "/xNASDAQLastSale/GetExtendedQuotes": {
       "get": {
         "tags": [
-          "XigniteGlobalIndicesRealTime"
+          "XigniteNASDAQLastSale"
         ],
         "parameters": [
           {
@@ -379,7 +102,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Weeks.IndexValue"
+                    "$ref": "#/components/schemas/ExtendedQuote"
                   }
                 }
               },
@@ -387,7 +110,15 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Weeks.IndexValue"
+                    "$ref": "#/components/schemas/ExtendedQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ExtendedQuote"
                   }
                 }
               },
@@ -395,7 +126,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Weeks.IndexValue"
+                    "$ref": "#/components/schemas/ExtendedQuote"
                   }
                 }
               },
@@ -403,7 +134,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Weeks.IndexValue"
+                    "$ref": "#/components/schemas/ExtendedQuote"
                   }
                 }
               }
@@ -412,54 +143,17 @@
         }
       }
     },
-    "/xGlobalIndicesRealtime/GetIndexBar": {
+    "/xNASDAQLastSale/GetLastSale": {
       "get": {
         "tags": [
-          "XigniteGlobalIndicesRealTime"
+          "XigniteNASDAQLastSale"
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "symbol",
             "in": "query",
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "identifierType",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/IdentifierTypes"
-                }
-              ]
-            }
-          },
-          {
-            "name": "endTime",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "precision",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/BarPrecision"
-                }
-              ]
-            }
-          },
-          {
-            "name": "period",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
             }
           }
         ],
@@ -469,27 +163,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexBar"
+                  "$ref": "#/components/schemas/LastSaleQuote"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexBar"
+                  "$ref": "#/components/schemas/LastSaleQuote"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexBar"
+                  "$ref": "#/components/schemas/LastSaleQuote"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexBar"
+                  "$ref": "#/components/schemas/LastSaleQuote"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexBar"
+                  "$ref": "#/components/schemas/LastSaleQuote"
                 }
               }
             }
@@ -497,10 +191,10 @@
         }
       }
     },
-    "/xGlobalIndicesRealtime/GetIndexBars": {
+    "/xNASDAQLastSale/GetLastSaleByIdentifier": {
       "get": {
         "tags": [
-          "XigniteGlobalIndicesRealTime"
+          "XigniteNASDAQLastSale"
         ],
         "parameters": [
           {
@@ -519,39 +213,6 @@
                   "$ref": "#/components/schemas/IdentifierTypes"
                 }
               ]
-            }
-          },
-          {
-            "name": "startTime",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "endTime",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "precision",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/BarPrecision"
-                }
-              ]
-            }
-          },
-          {
-            "name": "period",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
             }
           }
         ],
@@ -561,27 +222,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexBars"
+                  "$ref": "#/components/schemas/LastSaleQuote"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexBars"
+                  "$ref": "#/components/schemas/LastSaleQuote"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexBars"
+                  "$ref": "#/components/schemas/LastSaleQuote"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexBars"
+                  "$ref": "#/components/schemas/LastSaleQuote"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexBars"
+                  "$ref": "#/components/schemas/LastSaleQuote"
                 }
               }
             }
@@ -589,10 +250,147 @@
         }
       }
     },
-    "/xGlobalIndicesRealtime/GetChartBars": {
+    "/xNASDAQLastSale/GetLastSales": {
       "get": {
         "tags": [
-          "XigniteGlobalIndicesRealTime"
+          "XigniteNASDAQLastSale"
+        ],
+        "parameters": [
+          {
+            "name": "symbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSaleQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSaleQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSaleQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSaleQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSaleQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xNASDAQLastSale/GetLastSalesByIdentifiers": {
+      "get": {
+        "tags": [
+          "XigniteNASDAQLastSale"
+        ],
+        "parameters": [
+          {
+            "name": "identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSaleQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSaleQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSaleQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSaleQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSaleQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xNASDAQLastSale/GetQuote": {
+      "get": {
+        "tags": [
+          "XigniteNASDAQLastSale"
         ],
         "parameters": [
           {
@@ -612,30 +410,194 @@
                 }
               ]
             }
-          },
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Quote"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedQuote"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Quote"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedQuote"
+                    }
+                  ]
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Quote"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedQuote"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Quote"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedQuote"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Quote"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedQuote"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xNASDAQLastSale/GetQuotes": {
+      "get": {
+        "tags": [
+          "XigniteNASDAQLastSale"
+        ],
+        "parameters": [
           {
-            "name": "startTime",
+            "name": "identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endTime",
+            "name": "identifierType",
             "in": "query",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
             }
-          },
-          {
-            "name": "precision",
-            "in": "query",
-            "schema": {
-              "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Quote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedQuote"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Quote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedQuote"
+                      }
+                    ]
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Quote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedQuote"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Quote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedQuote"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Quote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedQuote"
+                      }
+                    ]
+                  }
+                }
+              }
             }
-          },
+          }
+        }
+      }
+    },
+    "/xNASDAQLastSale/ListTradedSymbols": {
+      "get": {
+        "tags": [
+          "XigniteNASDAQLastSale"
+        ],
+        "parameters": [
           {
-            "name": "period",
+            "name": "numberOfDays",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -643,14 +605,116 @@
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "startSymbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "includeExtended",
+            "name": "endSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TradedSymbolList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TradedSymbolList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/TradedSymbolList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/TradedSymbolList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/TradedSymbolList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xNASDAQLastSale/GetChartBars": {
+      "get": {
+        "tags": [
+          "XigniteNASDAQLastSale"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Precision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Period",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "AdjustmentMethod",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeExtended",
             "in": "query",
             "schema": {
               "type": "boolean"
@@ -663,27 +727,174 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexChartBars"
+                  "$ref": "#/components/schemas/EquityChartBars"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexChartBars"
+                  "$ref": "#/components/schemas/EquityChartBars"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexChartBars"
+                  "$ref": "#/components/schemas/EquityChartBars"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexChartBars"
+                  "$ref": "#/components/schemas/EquityChartBars"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexChartBars"
+                  "$ref": "#/components/schemas/EquityChartBars"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xNASDAQLastSale/GetBars": {
+      "get": {
+        "tags": [
+          "XigniteNASDAQLastSale"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Precision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Period",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBars"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBars"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBars"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBars"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBars"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xNASDAQLastSale/GetBar": {
+      "get": {
+        "tags": [
+          "XigniteNASDAQLastSale"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Precision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Period",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBar"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBar"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBar"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBar"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBar"
                 }
               }
             }
@@ -694,6 +905,19 @@
   },
   "components": {
     "schemas": {
+      "IdentifierTypes": {
+        "enum": [
+          "Symbol",
+          "CIK",
+          "CUSIP",
+          "ISIN",
+          "Valoren",
+          "SEDOL",
+          "FIGI",
+          "CompositeFIGI"
+        ],
+        "type": "string"
+      },
       "OutcomeTypes": {
         "enum": [
           "Success",
@@ -728,26 +952,52 @@
         },
         "additionalProperties": false
       },
-      "IndexGroup": {
+      "Security": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
           "Name": {
             "type": "string",
             "nullable": true
           },
-          "Description": {
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "MostLiquidExchange": {
+            "type": "boolean"
+          },
+          "CategoryOrIndustry": {
             "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "IndexDescription": {
+      "Quote": {
         "type": "object",
         "allOf": [
           {
@@ -755,94 +1005,14 @@
           }
         ],
         "properties": {
-          "IndexName": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "IndexGroup": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "IndexDescriptionDto": {
-        "type": "object",
-        "properties": {
-          "IndexName": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "IndexGroup": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "IndexSymbolMapping": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Index": {
+          "Security": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/IndexDescriptionDto"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
           },
-          "OldSymbol": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "IdentifierTypes": {
-        "enum": [
-          "Symbol",
-          "CIK",
-          "CUSIP",
-          "ISIN",
-          "Valoren",
-          "SEDOL",
-          "FIGI",
-          "CompositeFIGI"
-        ],
-        "type": "string"
-      },
-      "IndexQuote": {
-        "type": "object",
-        "properties": {
           "Date": {
             "type": "string",
             "nullable": true
@@ -855,11 +1025,11 @@
             "type": "number",
             "format": "double"
           },
-          "Volume": {
+          "Open": {
             "type": "number",
             "format": "double"
           },
-          "Open": {
+          "Close": {
             "type": "number",
             "format": "double"
           },
@@ -875,17 +1045,17 @@
             "type": "number",
             "format": "double"
           },
-          "Close": {
+          "LastSize": {
             "type": "number",
             "format": "double"
           },
-          "ChangeFromOpen": {
+          "Volume": {
             "type": "number",
             "format": "double"
           },
-          "PercentChangeFromOpen": {
-            "type": "number",
-            "format": "double"
+          "VolumeDate": {
+            "type": "string",
+            "nullable": true
           },
           "PreviousClose": {
             "type": "number",
@@ -895,37 +1065,88 @@
             "type": "string",
             "nullable": true
           },
-          "ChangeFromPreviousClose": {
+          "Change": {
             "type": "number",
             "format": "double"
           },
-          "PercentChangeFromPreviousClose": {
+          "PercentChange": {
             "type": "number",
             "format": "double"
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "BidSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "BidDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "BidTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "AskSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "AskDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "TradingHalted": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
       },
-      "Weeks.IndexQuote": {
+      "ExtendedQuote": {
         "type": "object",
         "allOf": [
           {
-            "$ref": "#/components/schemas/IndexQuote"
+            "$ref": "#/components/schemas/Quote"
           }
         ],
         "properties": {
-          "High52Weeks": {
+          "ExtendedHoursDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursType": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursPrice": {
             "type": "number",
             "format": "double"
           },
-          "Low52Weeks": {
+          "ExtendedHoursChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExtendedHoursPercentChange": {
             "type": "number",
             "format": "double"
           }
         },
         "additionalProperties": false
       },
-      "IndexValue": {
+      "LastSaleQuote": {
         "type": "object",
         "allOf": [
           {
@@ -933,86 +1154,27 @@
           }
         ],
         "properties": {
-          "Identifier": {
+          "Symbol": {
             "type": "string",
             "nullable": true
           },
-          "IdentifierType": {
+          "CompanyName": {
             "type": "string",
             "nullable": true
           },
-          "Index": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/IndexDescriptionDto"
-              }
-            ],
-            "nullable": true
-          },
-          "Value": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/IndexQuote"
-              },
-              {
-                "$ref": "#/components/schemas/Weeks.IndexQuote"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Weeks.IndexValue": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/IndexValue"
-          }
-        ],
-        "properties": {
-          "Value": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Weeks.IndexQuote"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "BarPrecision": {
-        "enum": [
-          "Minutes",
-          "Hours"
-        ],
-        "type": "string"
-      },
-      "Bar": {
-        "type": "object",
-        "properties": {
-          "StartDate": {
+          "Date": {
             "type": "string",
             "nullable": true
           },
-          "StartTime": {
+          "Time": {
             "type": "string",
             "nullable": true
           },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCOffset": {
+          "Open": {
             "type": "number",
             "format": "double"
           },
-          "Open": {
+          "Close": {
             "type": "number",
             "format": "double"
           },
@@ -1024,18 +1186,69 @@
             "type": "number",
             "format": "double"
           },
-          "Close": {
+          "Last": {
             "type": "number",
             "format": "double"
           },
           "Volume": {
             "type": "number",
             "format": "double"
+          },
+          "PreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousCloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Change": {
+            "type": "number",
+            "format": "double"
+          },
+          "PercentChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "TradingHalted": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
       },
-      "IndexBar": {
+      "ExchangeDescription": {
+        "type": "object",
+        "properties": {
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TradedSecurityDescription": {
+        "type": "object",
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TradedSymbolList": {
         "type": "object",
         "allOf": [
           {
@@ -1043,45 +1256,18 @@
           }
         ],
         "properties": {
-          "Index": {
+          "Exchange": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/IndexDescriptionDto"
+                "$ref": "#/components/schemas/ExchangeDescription"
               }
             ],
             "nullable": true
           },
-          "Bar": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Bar"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "IndexBars": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Index": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/IndexDescriptionDto"
-              }
-            ],
-            "nullable": true
-          },
-          "Bars": {
+          "SecurityDescriptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Bar"
+              "$ref": "#/components/schemas/TradedSecurityDescription"
             },
             "nullable": true
           }
@@ -1158,22 +1344,32 @@
         },
         "additionalProperties": false
       },
-      "IndexChartBars": {
+      "EquityChartBars": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
-          "Timing": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
             "type": "string",
             "nullable": true
           },
-          "Index": {
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Security": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/IndexDescriptionDto"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -1183,6 +1379,173 @@
             "items": {
               "$ref": "#/components/schemas/ChartBar"
             },
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Timing": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Bar": {
+        "type": "object",
+        "properties": {
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCOffset": {
+            "type": "number",
+            "format": "double"
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "Trades": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TWAP": {
+            "type": "number",
+            "format": "double"
+          },
+          "VWAP": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlobalBars": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Bars": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bar"
+            },
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlobalBar": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Bar": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Bar"
+              }
+            ],
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
             "nullable": true
           }
         },
