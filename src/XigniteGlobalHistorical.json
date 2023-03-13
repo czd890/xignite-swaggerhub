@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalHistorical",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -10,7 +10,7 @@
     }
   ],
   "paths": {
-    "/V3/xGlobalHistorical/ListExchanges": {
+    "/v3/xGlobalHistorical/ListExchanges": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -25,6 +25,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ExchangeList"
                 }
@@ -44,7 +49,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/ListSymbols": {
+    "/v3/xGlobalHistorical/ListSymbols": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -86,6 +91,11 @@
                   "$ref": "#/components/schemas/SymbolList"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SymbolList"
@@ -101,7 +111,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/ListSymbolChanges": {
+    "/v3/xGlobalHistorical/ListSymbolChanges": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -136,6 +146,11 @@
                   "$ref": "#/components/schemas/SymbolChangeList"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolChangeList"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SymbolChangeList"
@@ -151,7 +166,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/ListSymbolsWithAdjustedFactors": {
+    "/v3/xGlobalHistorical/ListSymbolsWithAdjustedFactors": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -186,6 +201,11 @@
                   "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
@@ -201,7 +221,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetCashDividendHistory": {
+    "/v3/xGlobalHistorical/GetCashDividendHistory": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -264,6 +284,11 @@
                   "$ref": "#/components/schemas/CashDividendHistory"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/CashDividendHistory"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/CashDividendHistory"
@@ -279,7 +304,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetCashDividendsByExchange": {
+    "/v3/xGlobalHistorical/GetCashDividendsByExchange": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -321,6 +346,11 @@
                   "$ref": "#/components/schemas/ExchangeDividendsList"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeDividendsList"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ExchangeDividendsList"
@@ -336,7 +366,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetSplitHistory": {
+    "/v3/xGlobalHistorical/GetSplitHistory": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -392,6 +422,11 @@
                   "$ref": "#/components/schemas/SplitHistory"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SplitHistory"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SplitHistory"
@@ -407,7 +442,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetSplitsByExchange": {
+    "/v3/xGlobalHistorical/GetSplitsByExchange": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -442,6 +477,11 @@
                   "$ref": "#/components/schemas/ExchangeSplitsList"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ExchangeSplitsList"
@@ -457,7 +497,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetGlobalHistoricalQuotes": {
+    "/v3/xGlobalHistorical/GetGlobalHistoricalQuotes": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -519,6 +559,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -540,7 +588,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetGlobalHistoricalQuotesTrailing": {
+    "/v3/xGlobalHistorical/GetGlobalHistoricalQuotesTrailing": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -610,6 +658,11 @@
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
@@ -625,7 +678,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetGlobalHistoricalQuotesRange": {
+    "/v3/xGlobalHistorical/GetGlobalHistoricalQuotesRange": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -688,6 +741,11 @@
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
@@ -703,7 +761,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetGlobalHistoricalWeeklyQuotesRange": {
+    "/v3/xGlobalHistorical/GetGlobalHistoricalWeeklyQuotesRange": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -766,6 +824,11 @@
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
@@ -781,7 +844,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetGlobalHistoricalMonthlyQuotesRange": {
+    "/v3/xGlobalHistorical/GetGlobalHistoricalMonthlyQuotesRange": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -844,6 +907,11 @@
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
@@ -859,7 +927,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetGlobalHistoricalQuarterlyQuotesRange": {
+    "/v3/xGlobalHistorical/GetGlobalHistoricalQuarterlyQuotesRange": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -922,6 +990,11 @@
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
@@ -937,7 +1010,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetGlobalHistoricalTrades": {
+    "/v3/xGlobalHistorical/GetGlobalHistoricalTrades": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -999,6 +1072,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -1020,7 +1101,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetGlobalHistoricalTradesRange": {
+    "/v3/xGlobalHistorical/GetGlobalHistoricalTradesRange": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -1083,6 +1164,11 @@
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/GlobalHistoricalQuotes"
@@ -1098,7 +1184,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetAdjustmentFactors": {
+    "/v3/xGlobalHistorical/GetAdjustmentFactors": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -1149,6 +1235,11 @@
                   "$ref": "#/components/schemas/AdjustmentFactors"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdjustmentFactors"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/AdjustmentFactors"
@@ -1164,7 +1255,7 @@
         }
       }
     },
-    "/V3/xGlobalHistorical/GetGlobalHistoricalVWAP": {
+    "/v3/xGlobalHistorical/GetGlobalHistoricalVWAP": {
       "get": {
         "tags": [
           "XigniteGlobalHistorical"
@@ -1230,6 +1321,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
                 }
