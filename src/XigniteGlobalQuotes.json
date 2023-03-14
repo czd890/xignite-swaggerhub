@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalQuotes",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -621,6 +621,80 @@
               "text/csv": {
                 "schema": {
                   "$ref": "#/components/schemas/MarketMovers"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/xGlobalQuotes/GetAuctionPrices": {
+      "get": {
+        "tags": [
+          "XigniteGlobalQuotes"
+        ],
+        "parameters": [
+          {
+            "name": "identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalAuctionQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalAuctionQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalAuctionQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalAuctionQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalAuctionQuote"
+                  }
                 }
               }
             }
@@ -1660,6 +1734,77 @@
             "items": {
               "$ref": "#/components/schemas/MarketMover"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlobalAuctionQuote": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/QuoteWithSecurity"
+          }
+        ],
+        "properties": {
+          "OpeningAuction": {
+            "type": "number",
+            "format": "double"
+          },
+          "OpeningAuctionSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "OpeningAuctionDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "OpeningAuctionTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "ClosingAuction": {
+            "type": "number",
+            "format": "double"
+          },
+          "ClosingAuctionSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "ClosingAuctionDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ClosingAuctionTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastAuction": {
+            "type": "number",
+            "format": "double"
+          },
+          "LastAuctionSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousClosingAuction": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousClosingAuctionDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCOffset": {
+            "type": "number",
+            "format": "double"
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Time": {
+            "type": "string",
             "nullable": true
           }
         },
