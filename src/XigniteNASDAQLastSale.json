@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNASDAQLastSale",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -1005,14 +1005,6 @@
           }
         ],
         "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
-          },
           "Date": {
             "type": "string",
             "nullable": true
@@ -1107,6 +1099,14 @@
           },
           "TradingHalted": {
             "type": "boolean"
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
           }
         },
         "additionalProperties": false
