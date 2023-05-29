@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteMoneyMarkets",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -63,14 +63,14 @@
         ],
         "parameters": [
           {
-            "name": "swapType",
+            "name": "SwapType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -125,7 +125,7 @@
         ],
         "parameters": [
           {
-            "name": "pattern",
+            "name": "Pattern",
             "in": "query",
             "schema": {
               "type": "string"
@@ -180,14 +180,14 @@
         ],
         "parameters": [
           {
-            "name": "type",
+            "name": "Type",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -230,21 +230,28 @@
         ],
         "parameters": [
           {
-            "name": "swapType",
+            "name": "SwapType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "tenor",
+            "name": "Tenor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FloatingReferenceRate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -287,7 +294,7 @@
         ],
         "parameters": [
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -342,14 +349,21 @@
         ],
         "parameters": [
           {
-            "name": "swapType",
+            "name": "SwapType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FloatingReferenceRate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -404,21 +418,21 @@
         ],
         "parameters": [
           {
-            "name": "type",
+            "name": "Type",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -461,28 +475,35 @@
         ],
         "parameters": [
           {
-            "name": "swapType",
+            "name": "SwapType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "tenor",
+            "name": "Tenor",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FloatingReferenceRate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -525,28 +546,28 @@
         ],
         "parameters": [
           {
-            "name": "type",
+            "name": "Type",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -601,35 +622,42 @@
         ],
         "parameters": [
           {
-            "name": "swapType",
+            "name": "SwapType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "tenor",
+            "name": "Tenor",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FloatingReferenceRate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -684,14 +712,14 @@
         ],
         "parameters": [
           {
-            "name": "type",
+            "name": "Type",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -734,7 +762,7 @@
         ],
         "parameters": [
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -789,28 +817,28 @@
         ],
         "parameters": [
           {
-            "name": "firstType",
+            "name": "FirstType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "secondType",
+            "name": "SecondType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -853,14 +881,14 @@
         ],
         "parameters": [
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -915,21 +943,21 @@
         ],
         "parameters": [
           {
-            "name": "firstType",
+            "name": "FirstType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "secondType",
+            "name": "SecondType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -972,7 +1000,7 @@
         ],
         "parameters": [
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1027,28 +1055,28 @@
         ],
         "parameters": [
           {
-            "name": "firstType",
+            "name": "FirstType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "secondType",
+            "name": "SecondType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
